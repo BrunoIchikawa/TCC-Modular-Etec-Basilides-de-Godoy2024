@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f8ff;
+    padding: 20px 90px;
+}
+
+header .logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    height: 800px;
+    /* Definindo uma altura mínima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    /* Substitua por uma imagem de fundo */
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    /* Transparência na imagem para destacar o texto */
+}
+
+button {
+    border-radius: 15px;
+}
+
+.intro-text {
+    position: absolute;
+    top: 50%;
+    /* Centralizando verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente para legibilidade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro-text span {
+    color: #00BFFF;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+.intro-text button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #f0f8ff;
+    gap: 20px;
+}
+
+.txt-history {
+    flex: 1;
+    margin-right: 2%;
+}
+
+
+
+.mission h2, .vision h2, .values h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.mission p, .vision p, .values p{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mvv {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.mission, .vision, .values {
+    background-color: #A2BEDC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffff;
+    margin-top: 3%;
+}
+
+.mission:hover, .vision:hover, .values:hover {
+    transform: scale(1.1);
+    transition: 0.8 ease-in;
+}
+
+.mission img, .vision img, .values img {
+    width: 80px;
+    height: 80px;
+}
+
+
+.ns {
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.ns::before {
+    content: "";
+    width: 14%;
+    height: 4px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+}
+
+.portfolio {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.portfolio h2 {
+    margin-bottom: 30px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.project1,
+.project2,
+.project3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background-color: #A2BEDC;
+    color: #f0f8ff;
+    width: 500px;
+    height: 200px;
+}
+
+.containerIcons {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 16px;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.iconHome{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.containerIcons p{
+    border: 1px solid #f0f8ff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 250px;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+}
+
+.containerIcons p:hover{
+    color: #f0f8ff;
+}
+
+.containerIcons img {
+    width: 30px;
+    height: 30px;
+}
+
+#voltDrive {
+    width: 150px;
+    height: 150px;
+}
+
+.servicos {
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+.servicos-holders {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #A2BEDC;
+    color: black;
+    border-radius: 20px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #A2BEDC;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+
+  }
+.servicos1 img,
+.servicos2 img,
+.servicos3 img {
+    width: 100px;
+    height: 80px;
+}
+
+/*CADASTRO*/
+.cadastro {
+    background-color: #6B94C1;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cadastro-holder {
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+    width: 350px;
+    height: 100vh;
+    padding: 10px;
+
+
+}
+
+.cadastro-holder h2 {
+    margin-bottom: 8%;
+}
+
+form {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 0.3px black;
+    width: 80%;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.btn-cad input {
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-cad input:hover {
+    background-color: #6B94C1;
+    color: black;
+    border: none;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.priv {
+    color: rgb(16, 51, 188);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+    }
+
+    .intro-text h1 {
+        font-size: 1.8em;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
